@@ -71,7 +71,7 @@ public class Res extends RESTService {
 
   @Api
   @SwaggerDefinition(
-      info = @Info(title = "156", version = "0.0.0",
+      info = @Info(title = "156", version = "",
           description = "",
           termsOfService = "",
           contact = @Contact(name = "", email = "CAEAddress@gmail.com") ,
@@ -87,7 +87,7 @@ public class Res extends RESTService {
    * gettest
    *
    * 
-   * @param payload  a JSONObject
+
    * 
    * @return Response 
    * 
@@ -95,13 +95,12 @@ public class Res extends RESTService {
   @POST
   @Path("/test")
   @Produces(MediaType.APPLICATION_JSON)
-  @Consumes(MediaType.APPLICATION_JSON)
+  @Consumes(MediaType.TEXT_PLAIN)
   @ApiResponses(value = {
        @ApiResponse(code = HttpURLConnection.HTTP_OK, message = "res")
   })
   @ApiOperation(value = "gettest", notes = " ")
-  public Response gettest(String payload) {
-    JSONObject payload_JSON = (JSONObject) JSONValue.parse(payload);
+  public Response gettest() {
 
 
 
